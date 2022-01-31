@@ -31,8 +31,8 @@ CaptivePortalUIQuery="Select a captive portal interface for the rogue network."
 CaptivePortalGenericInterfaceOption="Generic Portal"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 CaptivePortalConnectivityQuery="Select an internet connectivity type for the rogue network."
-CaptivePortalConnectivityDisconnectedOption="disconnected (${CGrn}recommended$CClr)"
-CaptivePortalConnectivityEmulatedOption="emulated"
+CaptivePortalConnectivityDisconnectedOption="disconnected"
+CaptivePortalConnectivityEmulatedOption="emulated (${CGrn}recommended$CClr)"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 # FLUXSCRIPT END
