@@ -281,7 +281,7 @@ fluxion_startup() {
   local requiredCLITools=(
     "aircrack-ng" "bc" "awk:awk|gawk|mawk"
     "curl" "cowpatty" "dhcpd:isc-dhcp-server|dhcp" "7zr:p7zip" "hostapd" "lighttpd"
-    "iwconfig:wireless-tools" "macchanger" "mdk4" "dsniff" "mdk3" "nmap" "openssl"
+    "iwconfig:wireless-tools" "macchanger" "mdk4" "python3" "mdk3" "nmap" "openssl"
     "php-cgi" "xterm" "rfkill" "unzip" "route:net-tools"
     "fuser:psmisc" "killall:psmisc"
   )
@@ -336,6 +336,7 @@ fluxion_shutdown() {
     echo -e "$CWht[$CRed-$CWht] `io_dynamic_output $FLUXIONKillingProcessNotice`"
     kill -s SIGKILL $targetPID &> $FLUXIONOutputDevice
   done
+  kill -s SIGKILL $authService &> $FLUXIONOutputDevice
 
   # Assure changes are reverted if installer was activated.
   if [ "$PackageManagerCLT" ]; then
