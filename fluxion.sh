@@ -118,7 +118,7 @@ while [ "$1" != "" ] && [ "$1" != "--" ]; do
     -k|--killer) readonly FLUXIONWIKillProcesses=1;;
     -5|--5ghz) FLUXIONEnable5GHZ=1;;
     -r|--reloader) readonly FLUXIONWIReloadDriver=1;;
-    -n|--airmon-ng) readonly FLUXIONAirmonNG=1;;
+    -n|--network) readonly FLUXIONAirmonNG=1;;
     -m|--multiplexer) readonly FLUXIONTMux=1;;
     -b|--bssid) FluxionTargetMAC=$2; shift;;
     -e|--essid) FluxionTargetSSID=$2;
@@ -281,7 +281,7 @@ fluxion_startup() {
   local requiredCLITools=(
     "aircrack-ng" "bc" "awk:awk|gawk|mawk"
     "curl" "cowpatty" "dhcpd:isc-dhcp-server|dhcp" "7zr:p7zip" "hostapd" "lighttpd"
-    "iwconfig:wireless-tools" "macchanger" "mdk4" "python3" "mdk3" "nmap" "openssl"
+    "iwconfig:wireless-tools" "macchanger" "mdk4" "dnsmasq" "mdk3" "nmap" "openssl"
     "php-cgi" "xterm" "rfkill" "unzip" "route:net-tools"
     "fuser:psmisc" "killall:psmisc"
   )
