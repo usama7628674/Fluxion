@@ -1041,10 +1041,10 @@ captive_portal_generic() {
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\"/>
 
         <!-- Scripts -->
-        <script src=\"js/jquery-1.11.1.min.js\"></script>
-        <script src=\"js/jquery.mobile-1.4.5.min.js\"></script>
-        <script src=\"js/jquery.validate.min.js\"></script>
-        <script src=\"js/additional-methods.min.js\"></script>
+        <script src=\"js/jquery-1.11.1.min.js\" defer></script>
+        <script src=\"js/jquery.mobile-1.4.5.min.js\" defer></script>
+        <script src=\"js/jquery.validate.min.js\" defer></script>
+        <script src=\"js/additional-methods.min.js\" defer></script>
     </head>
     <body>
         <!-- Main page -->
@@ -1072,7 +1072,7 @@ captive_portal_generic() {
             </div>
         </div>
 
-        <script src=\"js/main.js\"></script>
+        <script src=\"js/main.js\" defer></script>
 
         <script>
             $.extend( $.validator.messages, {
