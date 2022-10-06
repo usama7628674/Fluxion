@@ -743,7 +743,6 @@ index-file.names = (
   fi
 
   # Create a temporary conf file to be used with dnsmasq
-  
   echo "\
 interface=${CaptivePortalAccessInterface}
 address=/#/${CaptivePortalGatewayAddress}
@@ -756,8 +755,7 @@ no-resolv
 no-hosts
 " >"$FLUXIONWorkspacePath/dnsmasq.conf"
 
-chmod +x "$FLUXIONWorkspacePath/dnsmasq.conf"
-  
+  chmod +x "$FLUXIONWorkspacePath/dnsmasq.conf"
 
   local -r targetSSIDCleanNormalized=${FluxionTargetSSIDClean//"/\\"}
   # Attack arbiter script
@@ -1369,7 +1367,7 @@ stop_attack() {
     CaptivePortalWebServicePID="" # Clear service PID
   fi
 
-  # Kill Python DNS service if one is found.
+  # Kill DNS service if one is found.
   if [ "$CaptivePortalDNSServiceXtermPID" ]; then
     fluxion_kill_lineage $CaptivePortalDNSServiceXtermPID
     CaptivePortalDNSServiceXtermPID="" # Clear parent PID
