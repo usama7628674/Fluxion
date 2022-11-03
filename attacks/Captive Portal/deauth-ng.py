@@ -1,7 +1,7 @@
-#!/usr/bin/env python2
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
-from scapy.all import *
+from scapy.all import * # scapy 2.4.4 - latest one gives error unless compile from source
 
 import os
 import sys
@@ -432,7 +432,7 @@ def parse_args():
     return vars(parser.parse_args())
 
 def get_ssid(p):
-    if p and u"\x00" not in "".join([x if ord(x) < 128 else "" for x in p]):
+    if p and u"\x00" not in "".join([str(x) if x < 128 else "" for x in p]):
 
         try:
             name = p.decode("utf-8")        # Remove assholes emojis in SSID's
